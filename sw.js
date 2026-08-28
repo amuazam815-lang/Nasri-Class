@@ -1,38 +1,59 @@
-const CACHE_NAME = "nasri-class-v1";
+const CACHE = 'nasri-class-v2';
 
-const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./script.js",
-  "./manifest.json"
+const ASSETS = [
+  './',
+  './index.html',
+  './style.css',
+  './script.js',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
-self.addEventListener("install", function (event) {
+self.addEventListener('install', event => {
 
-  event.waitUntil(
+event.waitUntil(
 
-    caches.open(CACHE_NAME).then(function (cache) {
+caches.open(CACHE).then(cache => {
 
-      return cache.addAll(FILES_TO_CACHE);
+return cache.addAll(ASSETS);
 
-    })
+})
 
-  );
+);
 
 });
 
+self.addEventListener('fetch', event => {
 
-self.addEventListener("fetch", function (event) {
+event.respondWith(
 
-  event.respondWith(
+caches.match(event.request).then(response => {
 
-    caches.match(event.request).then(function (response) {
+return response || fetch(event.request);
 
-      return response || fetch(event.request);
+})
 
-    })
+);
 
-  );
+});
+
+self.addEventListener('activate', event => {
+
+event.waitUntil(
+
+caches.keys().then(keys =>
+
+Promise.all(
+
+keys
+.filter(key => key !== CACHE)
+.map(key => caches.delete(key))
+
+)
+
+)
+
+);
 
 });

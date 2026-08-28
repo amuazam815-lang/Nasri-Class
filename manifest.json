@@ -1,12 +1,13 @@
 {
   "name": "Nasri Class",
   "short_name": "Nasri Class",
-  "description": "Smart learning app for kids",
-  "start_url": "./",
+  "description": "Learn, Quiz and Grow",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#f6f7fb",
-  "theme_color": "#6c63ff",
-  "orientation": "portrait",
+  "theme_color": "#6257e8",
+  "orientation": "portrait-primary",
+
   "icons": [
     {
       "src": "icon-192.png",

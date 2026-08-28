@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#6C63FF">
+  <meta name="description" content="Nasri Class - Smart Learning App">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Nasri Class</title>
+</head>
+
+<body>
+
+  <!-- Splash Screen -->
+  <section id="splash" class="splash">
+    <div class="logo">📚</div>
+    <h1>Nasri Class</h1>
+    <p>Learn • Practice • Grow</p>
+  </section>
+
+  <!-- Main App -->
+  <main id="app" class="app hidden">
+
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <small>Welcome back 👋</small>
+        <h2>Nasri Class</h2>
+      </div>
+
+      <div class="profile">👤</div>
+    </header>
+
+    <!-- Progress Card -->
+    <section class="progress-card">
+      <div>
+        <span>Today's Goal</span>
+        <h2>75%</h2>
+        <p>Keep learning!</p>
+      </div>
+
+      <div class="progress-circle">
+        <span>75%</span>
+      </div>
+    </section>
+
+    <!-- Streak -->
+    <section class="streak">
+      <div>
+        <strong>🔥 7 Day Streak</strong>
+        <p>Great job! Keep it going.</p>
+      </div>
+      <span>⭐</span>
+    </section>
+
+    <!-- Subjects -->
+    <div class="section-title">
+      <h3>Subjects</h3>
+      <button onclick="showAllSubjects()">View All</button>
+    </div>
+
+    <section class="subjects">
+
+      <button class="subject urdu" onclick="openSubject('Urdu')">
+        <span>📖</span>
+        <strong>Urdu</strong>
+        <small>12 Lessons</small>
+      </button>
+
+      <button class="subject english" onclick="openSubject('English')">
+        <span>🔤</span>
+        <strong>English</strong>
+        <small>15 Lessons</small>
+      </button>
+
+      <button class="subject math" onclick="openSubject('Math')">
+        <span>➕</span>
+        <strong>Math</strong>
+        <small>18 Lessons</small>
+      </button>
+
+      <button class="subject science" onclick="openSubject('Science')">
+        <span>🔬</span>
+        <strong>Science</strong>
+        <small>10 Lessons</small>
+      </button>
+
+    </section>
+
+    <!-- Quick Features -->
+    <div class="section-title">
+      <h3>Quick Learning</h3>
+    </div>
+
+    <section class="features">
+
+      <button onclick="openPoems()">
+        🎵
+        <span>Poems</span>
+      </button>
+
+      <button onclick="openQuiz()">
+        📝
+        <span>Quiz</span>
+      </button>
+
+      <button onclick="openProgress()">
+        📊
+        <span>Progress</span>
+      </button>
+
+      <button onclick="speakEnglish()">
+        🔊
+        <span>Speak</span>
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button onclick="goHome()">🏠<span>Home</span></button>
+    <button onclick="showAllSubjects()">📚<span>Subjects</span></button>
+    <button onclick="openQuiz()">📝<span>Quiz</span></button>
+    <button onclick="openProgress()">📊<span>Progress</span></button>
+  </nav>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

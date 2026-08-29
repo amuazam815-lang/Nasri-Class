@@ -1,83 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="ur">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#6257e8">
-<meta name="description" content="Nasri Class - Learn, Quiz and Grow">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#102a68">
+<meta name="mobile-web-app-capable" content="yes">
 <title>Nasri Class</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div id="app">
 
-<header class="top">
-  <div>
-    <span>Welcome back 👋</span>
-    <h1>Nasri Class</h1>
+<header class="topbar">
+  <button id="backBtn" class="topBtn" aria-label="واپس">←</button>
+
+  <div class="logoText">
+    <span>Nasri</span> Class
   </div>
-  <img class="avatar" src="icon-192.png">
+
+  <button id="globalSpeak" class="topBtn" aria-label="آواز">🔊</button>
 </header>
 
-<section class="goal">
-  <div>
-    <span>Today's Goal</span>
-    <strong>75%</strong>
-    <small>Keep learning!</small>
-  </div>
-  <div class="ring">75%</div>
-</section>
+<main id="screen"></main>
 
-<section class="streak">
-  <div>
-    <b>🔥 7 Day Streak</b>
-    <span>Great job! Keep it going.</span>
-  </div>
-  <span class="star">⭐</span>
-</section>
+<nav class="bottom">
 
-<div class="section-title">
-  <h2>Subjects</h2>
-  <button onclick="showAll()">View All</button>
-</div>
+  <button data-go="home">
+    🏠
+    <small>Home</small>
+  </button>
 
-<section id="subjects" class="grid"></section>
+  <button data-go="alphabet">
+    🔤
+    <small>A-Z</small>
+  </button>
 
-<h2 class="quick-title">Quick Learning</h2>
+  <button data-go="numbers">
+    🔢
+    <small>123</small>
+  </button>
 
-<section class="quick grid"></section>
+  <button data-go="urdu">
+    ا ب پ
+    <small>اردو</small>
+  </button>
 
-</div>
-
-<nav class="nav">
-
-<button onclick="home()">
-🏠
-<span>Home</span>
-</button>
-
-<button onclick="showAll()">
-📚
-<span>Subjects</span>
-</button>
-
-<button onclick="quiz()">
-📝
-<span>Quiz</span>
-</button>
-
-<button onclick="progress()">
-📊
-<span>Progress</span>
-</button>
+  <button data-go="more">
+    📚
+    <small>More</small>
+  </button>
 
 </nav>
 
-<script src="script.js"></script>
+</div>
+
+<script src="app.js"></script>
 
 </body>
 </html>
